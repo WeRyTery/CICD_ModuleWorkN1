@@ -14,3 +14,13 @@ def analyze_text(file_path : str):
     word_count = len(words)
 
     return word_count, sentence_count
+
+def main():
+    file_path = "C:\\Users\\Ghost\\Desktop\\Univ\\Document_data.txt"
+
+    words, sentences = analyze_text(file_path)
+
+    print(f"Words count: {words}")
+    print(f"Sentence count: {sentences}")
+
+main()
