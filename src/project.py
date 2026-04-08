@@ -26,4 +26,5 @@ def main():
     print(f"Sentence count: {sentences}")
 
 
-main()
+if __name__ == "__main__":
+    main()
