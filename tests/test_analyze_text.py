@@ -11,8 +11,6 @@ def file_path(tmp_path):
     return create_file
 
 
-# ✅ @pytest.mark.parametrize — тільки на тестовій функції, НЕ на фікстурі
-# ✅ Перший аргумент — рядок з іменами через кому
 @pytest.mark.parametrize(
     "content, words_count, sentences_count",
     [
@@ -24,7 +22,6 @@ def file_path(tmp_path):
     ],
 )
 def test_text_analyzer(file_path, content, words_count, sentences_count):
-    # ✅ Передаємо content у фікстуру
     file = file_path(content)
     words, sentences = analyze_text(file)
     assert words == words_count
