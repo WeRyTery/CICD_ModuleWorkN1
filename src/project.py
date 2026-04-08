@@ -9,7 +9,7 @@ def analyze_text(file_path : str):
     sentence_count = len(sentences)
 
     # count amount of words in text
-    words = re.split(r'[ ,:;]+', text)
+    words = re.split(r'[ \t\n,:;]+', text)
     words = [w for w in words if w.strip() != ''] # if no words given
     word_count = len(words)
 
